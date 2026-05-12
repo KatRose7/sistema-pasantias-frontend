@@ -19,6 +19,7 @@ import logoIcon from '../assets/logo_icon.png';
 import { EmpresaPanel } from '../components/empresa/EmpresaPanel';
 import { PasantiasPanel } from '../components/pasantias/PasantiasPanel';
 import { JefePasantiasPanel } from '../components/jefe/JefePasantiasPanel';
+import { PostulacionesPanel } from '../components/postulaciones/PostulacionesPanel';
 type Module =
   | 'dashboard'
   | 'empresa'
@@ -231,12 +232,7 @@ export const ManagerDashboard: React.FC = () => {
         );
 
       case 'postulaciones':
-        return (
-          <ModuloTemporal
-            titulo="Postulaciones Recibidas"
-            descripcion="Aquí se mostrarán las boletas de los estudiantes y las acciones para aprobar o rechazar."
-          />
-        );
+        return <PostulacionesPanel />;
 
       case 'seguimiento':
         return (
